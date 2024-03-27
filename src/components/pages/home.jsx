@@ -5,6 +5,7 @@ import guardian from "../../images/guardian.png";
 import spiderman from "../../images/spiderman.png";
 import Mask from "../../images/Mask.png";
 import Play from "../../images/Play.png";
+import play from "../../images/play.svg";
 import Card from "../pages/card";
 import { NavLink } from "react-router-dom";
 
@@ -62,6 +63,9 @@ function HomeFunc() {
           <div className="absolute w-[300px] top-[50px] right-[70px]">
             <img src={guardian} alt="guardian" className="w-full h-auto" />
           </div>
+          <div className="absolute w-[100px] top-[190px] right-[180px]">
+            <img src={play} alt="Mask" className="w-full h-auto" />
+          </div>
         </div>
       </div>
       {/* {This is line that containing more movies } */}
@@ -78,7 +82,7 @@ function HomeFunc() {
         </div>
       </span>
       <section className="flex items-center justify-start my-5 mx-5">
-        <div className="grid grid-cols-6 py-24 px-8 space-x-1 space-y-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 py-24 px-8 space-x-1 space-y-2">
           {userdata.map((movie, index) => (
             <NavLink key={index} to={`/explore/${movie.id}`}>
               <Card

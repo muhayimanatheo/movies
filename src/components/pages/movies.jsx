@@ -9,7 +9,22 @@ function MoviesFunc() {
   const {id}= useParams();
   console.log(id);
   const [movieShow, setMovieShow] = useState([]);
+
+  //function to handle logout
+  const handlelogou = ()=>{
+    localStorage.clear()
+    window.location.href="/"
+}
   useEffect(() => {
+//variable decralation
+    const ifuserisloggedin = ()=>{
+      const userdata = localStorage.getItem("userdata")
+      if(userdata == null) {
+          window.location.href="/login"
+  }
+  }
+  ifuserisloggedin()
+
     const showData = async () => {
       const playMovies = await axios.get(
         `https://api.themoviedb.org/3/movie/${id}/videos?language=en-US&api_key=498d5fb86f45e1f05cb32796f4d6f180`
@@ -24,8 +39,7 @@ function MoviesFunc() {
     <div>
       <p>
         <YouTubeIframe videoId={`${movieShow.key}`} />
-        <br />
-        
+        <button className="bg-black text-white px-4 py-2 rounded mt-5" onClick={handlelogou}>Logout</button>
       </p>
     </div>
   );

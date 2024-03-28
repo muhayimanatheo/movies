@@ -1,6 +1,19 @@
 import React, { useState } from "react";
 
 function LoginPage() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const data = {
+    email: email,
+    password: password,
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(data);
+    if(localStorage.setItem('userdata',JSON.stringify(email))){
+        window.location.href="/"
+    }
+  };
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="flex justify-center items-center h-screen">
@@ -16,6 +29,8 @@ function LoginPage() {
                 type="text"
                 id="username"
                 name="username"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 required
                 className="rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-1 focus:ring-blue-500"
               />
@@ -29,6 +44,8 @@ function LoginPage() {
                 type="password"
                 id="password"
                 name="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 required
                 className="rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-1 focus:ring-blue-500"
               />
@@ -53,6 +70,9 @@ function LoginPage() {
 
             <button
               type="submit"
+              onClick={(e) => {
+                handleSubmit(e);
+              }}
               className="block w-full rounded-md bg-black py-2 px-3 text-center text-white hover:bg-[#334155]  focus:outline-none focus:ring-2 focus:ring-offset-2"
             >
               Login

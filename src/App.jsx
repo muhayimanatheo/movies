@@ -18,7 +18,6 @@ function App() {
         
         <Route path="/" element={<Layout />}>
           <Route index element={<HomeFunc />} />
-          {/*<Route path ="/details/:id" element={<Details/>}/>*/}
           <Route path="/explore/:id" element={<ExploreFunc />} />
           <Route path="/genre" element={<GenreFunc />} />
           <Route path="/news" element={<NewsFunc />} />

@@ -26,16 +26,25 @@ function ExploreFunc() {
         <div>
           <img
             src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-            alt="" className=" w-64 "
+            alt=""
+            className=" w-64 "
           />
         </div>
 
         <div>
           <p className="text-white">
-            {movie.title}<br/>
-            {movie.vote_average}<br/>
-            {movie.status}<br/>
-            {movie.overview}
+            {movie.title}
+            <br />
+            {movie.vote_average}
+            <br />
+            {movie.status}
+            <br />
+            {movie.overview}            
+            <Link to={`/movies/${movie.id}`}>
+            <button className="bg-black text-white font-bold py-2 px-4 rounded">
+              Play
+            </button>
+          </Link>
           </p>
         </div>
       </Link>

@@ -39,14 +39,17 @@ function ExploreFunc() {
             <br />
             {movie.status}
             <br />
-            {movie.overview}            
-            <Link to={`/movies/${movie.id}`}>
+            {movie.overview}
+            {/* <Link to={`/movies/${movie.id}`}>
             <button className="bg-black text-white font-bold py-2 px-4 rounded">
               Play
             </button>
-          </Link>
+          </Link> */}
           </p>
         </div>
+        <button className="bg-black text-white font-bold py-2 px-4 rounded">
+          Play
+        </button>
       </Link>
     </div>
   );

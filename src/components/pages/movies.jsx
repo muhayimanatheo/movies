@@ -11,19 +11,19 @@ function MoviesFunc() {
   const [movieShow, setMovieShow] = useState([]);
 
   //function to handle logout
-  const handlelogou = ()=>{
+  const handlelogout = ()=>{
     localStorage.clear()
     window.location.href="/"
 }
   useEffect(() => {
 //variable decralation
-    const ifuserisloggedin = ()=>{
+    const ifuserlogin = ()=>{
       const userdata = localStorage.getItem("userdata")
       if(userdata == null) {
           window.location.href="/login"
   }
   }
-  ifuserisloggedin()
+  ifuserlogin()
 
     const showData = async () => {
       const playMovies = await axios.get(
@@ -39,7 +39,7 @@ function MoviesFunc() {
     <div>
       <p>
         <YouTubeIframe videoId={`${movieShow.key}`} />
-        <button className="bg-black text-white px-4 py-2 rounded mt-5" onClick={handlelogou}>Logout</button>
+        <button className="bg-black text-white px-4 py-2 rounded mt-5" onClick={handlelogout}>Logout</button>
       </p>
     </div>
   );

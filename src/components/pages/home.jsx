@@ -31,7 +31,6 @@ function HomeFunc() {
 
     fetchData(); // Call the fetchData function
   }, []);
-  // Empty dependency array to run the effect only once
 
   return (
     <main className="">

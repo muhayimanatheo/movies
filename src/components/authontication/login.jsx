@@ -10,7 +10,7 @@ function LoginPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(data);
-    if(localStorage.setItem('userdata',JSON.stringify(email))){
+    if(localStorage.setItem('userdata',JSON.stringify(Data))){
         window.location.href="/"
     }
   };

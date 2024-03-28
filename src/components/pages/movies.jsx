@@ -6,24 +6,24 @@ import { useParams } from "react-router-dom";
 
 function MoviesFunc() {
   /*This object is used to play the detailed movies */
-  const {id}= useParams();
+  const { id } = useParams();
   console.log(id);
   const [movieShow, setMovieShow] = useState([]);
 
   //function to handle logout
-  const handlelogout = ()=>{
-    localStorage.clear()
-    window.location.href="/"
-}
+  const handlelogout = () => {
+    localStorage.clear();
+    window.location.href = "/";
+  };
   useEffect(() => {
-//variable decralation
-    const ifuserlogin = ()=>{
-      const userdata = localStorage.getItem("userdata")
-      if(userdata == null) {
-          window.location.href="/login"
-  }
-  }
-  ifuserlogin()
+    //variable decralation
+    const ifuserlogin = () => {
+      const userdata = localStorage.getItem("userdata");
+      if (userdata == null) {
+        window.location.href = "/login";
+      }
+    };
+    ifuserlogin();
 
     const showData = async () => {
       const playMovies = await axios.get(
@@ -37,10 +37,18 @@ function MoviesFunc() {
   console.log(movieShow.key);
   return (
     <div>
-      <p>
+      <div>
         <YouTubeIframe videoId={`${movieShow.key}`} />
-        <button className="bg-black text-white px-4 py-2 rounded mt-5" onClick={handlelogout}>Logout</button>
-      </p>
+      </div>
+      <div>
+        <button
+        className="bg-black text-white px-4 py-2 rounded mt-5"
+        onClick={handlelogout}
+      >
+        Logout
+      </button>
+      </div>
+      
     </div>
   );
 }

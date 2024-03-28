@@ -36,11 +36,11 @@ function HomeFunc() {
     <main className="">
       <div className="flex">
         <div className="py-5 my-24 mx-8">
-          <h1 className="text-white font-bold text-3xl">FIND MOVIES</h1>
+          <h1 className="text-black font-bold text-3xl">FIND MOVIES</h1>
           <span className="bg-gradient-to-r from-blue-600 to-[#C40D60] inline-block text-transparent bg-clip-text font-bold text-5xl">
             TV SHOWS AND MORE
           </span>
-          <p className="text-white">
+          <p className="text-black">
             Lorem ipsum dolor sit amet, consectetur.
             <br />
             Accusantium, autem, consequuntur, corporis, delectus, doloremque,
@@ -49,10 +49,14 @@ function HomeFunc() {
           </p>
           <button
             type="button"
-            className="flex text-white border-2 border-white my-5 items-center"
+            className="flex border-2 text-black my-5 items-center bg-black "
           >
-            <img src={Play} alt="Play" className="w-10 h-10 mr-2 mx-1 " />
-            <span className="text-sm mx-2">Watch Tutorial</span>
+            <img
+              src={Play}
+              alt="Play"
+              className="w-10 h-10 mr-2 mx-1 text-black"
+            />
+            <span className="text-sm mx-2 text-white">Watch Tutorial</span>
           </button>
         </div>
         <div className="w-[500px] relative">
@@ -73,11 +77,11 @@ function HomeFunc() {
           <img src={Mask} alt="Mask" className="w-full h-auto" />
         </div>
         <div className="">
-          <p className="text-white">Trending</p>
+          <p className="text-black">Trending</p>
         </div>
-        <div className="border-t border-gray-300 my-4 w-[65rem] mx-2"></div>
+        <div className="border-t border-gray-500 my-4 w-[65rem] mx-2"></div>
         <div className="">
-          <p className="text-white">See More</p>
+          <p className="text-black">See More</p>
         </div>
       </span>
       <section className="flex items-center justify-start my-5 mx-5">

@@ -32,7 +32,7 @@ function ExploreFunc() {
         </div>
 
         <div>
-          <p className="text-white">
+          <p className="text-black">
             {movie.title}
             <br />
             {movie.vote_average}

@@ -1,5 +1,4 @@
 import React from "react";
-
 function Card({ Title, Year, Time, src }) {
   return (
     <div className="w-[13rem] px-4 border-1 border-white">

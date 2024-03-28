@@ -12,19 +12,18 @@ function NavBar() {
   return (
     <nav className="flex flex-wrap justify-between items-center py-4 px-6 bg-black">
       <div className="flex items-center justify-start">
-        <Link to="/" className="flex items-center">
-          <img
-            src={movielogo}
-            alt="movies logo"
-            className="h-10 sm:h-12 lg:h-16 w-auto"
-          />
+        <Link to="" className="flex items-center text-white">
+          <div>
+            <img
+              src={movielogo}
+              alt="movies logo"
+              className="h-10 sm:h-12 lg:h-16 w-auto"
+            />
+          </div>
         </Link>
       </div>
       <div className="lg:hidden">
-        <button
-          className="text-white focus:outline-none"
-          onClick={toggleMenu}
-        >
+        <button className="text-white focus:outline-none" onClick={toggleMenu}>
           <svg
             className="h-6 w-6"
             fill="none"
@@ -40,7 +39,10 @@ function NavBar() {
           </svg>
         </button>
       </div>
-      <div className={`lg:flex ${isOpen ? 'block' : 'hidden'}`} onClick={() => setIsOpen(false)}>
+      <div
+        className={`lg:flex ${isOpen ? "block" : "hidden"}`}
+        onClick={() => setIsOpen(false)}
+      >
         <div className="flex items-center justify-end mt-4 space-x-4 lg:space-x-8">
           <Link
             to="/"

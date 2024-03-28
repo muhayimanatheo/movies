@@ -1,58 +1,65 @@
-import React, { useState } from 'react';
-import './LoginPage.css'; // Import your CSS file
+import React, { useState } from "react";
 
 function LoginPage() {
-  const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    // Implement your login logic here (e.g., API call)
-    // Check for valid credentials and handle errors appropriately
-
-    // Example login logic (replace with your actual implementation)
-    if (username === 'admin' && email === 'admin@example.com') {
-      // Login successful
-      console.log('Login successful!');
-      // Redirect to the protected page or handle success
-    } else {
-      setErrorMessage('Invalid username or email');
-    }
-  };
-
   return (
-    <div className="login-page">
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="username">Username:</label>
-          <input
-            type="text"
-            id="username"
-            name="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-          />
+    <div className="container mx-auto px-4 py-8">
+      <div className="flex justify-center items-center h-screen">
+        <div className="w-full max-w-md p-8 bg-white rounded-lg shadow-md">
+          <h1 className="text-2xl font-bold text-center mb-4">Login</h1>
+
+          <form action="/login" method="post" className="space-y-4">
+            <div className="flex flex-col">
+              <label htmlFor="username" className="text-sm font-medium mb-2">
+                Username:
+              </label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                required
+                className="rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-1 focus:ring-blue-500"
+              />
+            </div>
+
+            <div className="flex flex-col">
+              <label htmlFor="password" className="text-sm font-medium mb-2">
+                Password:
+              </label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                required
+                className="rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-1 focus:ring-blue-500"
+              />
+            </div>
+
+            <div className="flex items-center justify-between">
+              <div className="flex items-center">
+                <input
+                  type="checkbox"
+                  id="remember"
+                  name="remember"
+                  className="w-4 h-4 mr-2"
+                />
+                <label htmlFor="remember" className="text-sm text-gray-700">
+                  Remember me
+                </label>
+              </div>
+              <a href="#" className="text-sm text-[#64748b] hover:underline">
+                Forgot password?
+              </a>
+            </div>
+
+            <button
+              type="submit"
+              className="block w-full rounded-md bg-black py-2 px-3 text-center text-white hover:bg-[#334155]  focus:outline-none focus:ring-2 focus:ring-offset-2"
+            >
+              Login
+            </button>
+          </form>
         </div>
-        <div className="form-group">
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <button type="submit">Login</button>
-        </div>
-        {errorMessage && <div className="error-message">{errorMessage}</div>}
-      </form>
+      </div>
     </div>
   );
 }

@@ -9,6 +9,7 @@ import GenreFunc from './components/pages/genre';
 import NewsFunc from './components/pages/news';
 import ShowsFunc from './components/pages/tvshow';
 import MoviesFunc from './components/pages/movies';
+import LoginPage from './components/authontication/login';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/news" element={<NewsFunc />} />
           <Route path="/movies/:id" element={<MoviesFunc />} />
           <Route path="/tvshow" element={<ShowsFunc />} />
+          <Route path ="login" element={<LoginPage />} />
         </Route>
       </Routes>
     </Router>

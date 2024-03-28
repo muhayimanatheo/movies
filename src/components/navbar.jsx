@@ -51,34 +51,40 @@ function NavBar() {
             Home
           </Link>
           <Link
-            to="/"
+            to=""
             className="text-white hover:text-[#1F35B3] text-sm lg:text-base"
           >
             Explore
           </Link>
           <Link
-            to="/"
+            to=""
             className="text-white hover:text-[#1F35B3] text-sm lg:text-base"
           >
             Genre
           </Link>
           <Link
-            to="/"
+            to=""
             className="text-white hover:text-[#1F35B3] text-sm lg:text-base"
           >
             News
           </Link>
           <Link
-            to="/"
+            to=""
             className="text-white hover:text-[#1F35B3] text-sm lg:text-base"
           >
             Movies
           </Link>
           <Link
-            to="/"
+            to=""
             className="text-white hover:text-[#1F35B3] text-sm lg:text-base"
           >
             Tv Shows
+          </Link>
+          <Link
+            to="login"
+            className="text-white hover:text-[#1F35B3] text-sm lg:text-base"
+          >
+            Login
           </Link>
         </div>
       </div>

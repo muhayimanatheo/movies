@@ -1,7 +1,7 @@
-import YouTubeIframe from "react-youtube-iframe";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import YouTube from "react-youtube";
 
 function MoviesFunc() {
   /*This object is used to play the detailed movies */
@@ -37,7 +37,7 @@ function MoviesFunc() {
   return (
     <div>
       <div>
-        <YouTubeIframe className="h-96 w-36" videoId={`${movieShow.key}`} />
+        <YouTube className="h-96 w-36" videoId={`${movieShow.key}`} />
       </div>
       <div>
         <button

@@ -1,4 +1,5 @@
-import React from "react";
+import PropTypes from 'prop-types'
+
 function Card({ Title, Year, Time, src }) {
   return (
     <div className="w-[13rem] px-4 border-1 border-white">
@@ -9,4 +10,12 @@ function Card({ Title, Year, Time, src }) {
     </div>
   );
 }
+
+Card.propTypes = {
+  Title: PropTypes.string.isRequired,
+  Year: PropTypes.string.isRequired,
+  Time: PropTypes.string.isRequired,
+  src: PropTypes.string.isRequired,
+}
+
 export default Card;

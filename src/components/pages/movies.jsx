@@ -1,4 +1,3 @@
-import React from "react";
 import YouTubeIframe from "react-youtube-iframe";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -33,7 +32,7 @@ function MoviesFunc() {
       setMovieShow(playMovies.data.results[0]);
     };
     showData();
-  }, []);
+  }, [id]);
   console.log(movieShow.key);
   return (
     <div>

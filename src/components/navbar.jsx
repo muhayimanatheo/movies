@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import movielogo from "../images/movielogo.png";
 // import { Search } from "react-router-dom";
@@ -81,7 +81,7 @@ function NavBar() {
             Home
           </Link>
           <Link
-            to=""
+            to="explore"
             className="text-white hover:text-[#1F35B3] text-sm lg:text-base"
           >
             Explore
@@ -109,12 +109,6 @@ function NavBar() {
             className="text-white hover:text-[#1F35B3] text-sm lg:text-base"
           >
             Tv Shows
-          </Link>
-          <Link
-            to=""
-            className="text-white hover:text-[#1F35B3] text-sm lg:text-base"
-          >
-            Search
           </Link>
           <Link
             to="login"

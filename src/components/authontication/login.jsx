@@ -10,7 +10,7 @@ function LoginPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(data);
-    if(localStorage.setItem('userdata',JSON.stringify(Data))){
+    if(localStorage.setItem('userdata',JSON.stringify(data))){
         window.location.href="/"
     }
   };
@@ -70,9 +70,7 @@ function LoginPage() {
 
             <button
               type="submit"
-              onClick={(e) => {
-                handleSubmit(e);
-              }}
+              onClick={(e) => { handleSubmit(e);}}
               className="block w-full rounded-md bg-black py-2 px-3 text-center text-white hover:bg-[#334155]  focus:outline-none focus:ring-2 focus:ring-offset-2"
             >
               Login

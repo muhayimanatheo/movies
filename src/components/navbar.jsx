@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import movielogo from "../images/movielogo.png";
-import { Search } from "react-router-dom";
+// import { Search } from "react-router-dom";
 
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);

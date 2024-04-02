@@ -34,7 +34,7 @@ function HomeFunc() {
 
   return (
     <main className="">
-      <div className="flex">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 ">
         <div className="py-5 my-24 mx-8">
           <h1 className="text-black font-bold text-3xl">FIND MOVIES</h1>
           <span className="bg-gradient-to-r from-blue-600 to-[#C40D60] inline-block text-transparent bg-clip-text font-bold text-5xl">
@@ -72,7 +72,7 @@ function HomeFunc() {
         </div>
       </div>
       {/* {This is line that containing more movies } */}
-      <span className="flex mx-5">
+      <span className="flex mx-5 ">
         <div className="">
           <img src={Mask} alt="Mask" className="w-full h-auto" />
         </div>

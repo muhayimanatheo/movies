@@ -38,17 +38,16 @@ function MoviesFunc() {
   return (
     <div>
       <div>
-        <YouTubeIframe videoId={`${movieShow.key}`} />
+        <YouTubeIframe className="h-96 w-36" videoId={`${movieShow.key}`} />
       </div>
       <div>
         <button
-        className="bg-black text-white px-4 py-2 rounded mt-5"
-        onClick={handlelogout}
-      >
-        Logout
-      </button>
+          className="bg-black text-white px-4 py-2 rounded mt-5"
+          onClick={handlelogout}
+        >
+          Logout
+        </button>
       </div>
-      
     </div>
   );
 }

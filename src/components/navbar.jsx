@@ -22,7 +22,7 @@ function NavBar() {
             />
           </div>
         </Link>
-        <div className="relative mx-4">
+        {/* <div className="relative mx-4">
           <input
             type="text"
             placeholder="Search..."
@@ -49,7 +49,7 @@ function NavBar() {
               />
             </svg>
           </button>
-        </div>
+        </div> */}
       </div>
 
       <div className="lg:hidden">
@@ -109,6 +109,12 @@ function NavBar() {
             className="text-white hover:text-[#1F35B3] text-sm lg:text-base"
           >
             Tv Shows
+          </Link>
+          <Link
+            to=""
+            className="text-white hover:text-[#1F35B3] text-sm lg:text-base"
+          >
+            Search
           </Link>
           <Link
             to="login"

@@ -11,8 +11,8 @@ function NavBar() {
   };
 
   return (
-    <nav className="flex flex-wrap justify-between items-center py-4 px-6 bg-black">
-      <div className="flex items-center justify-start">
+    <nav className=" sticky top-0 flex flex-wrap justify-between items-center py-4 px-2 bg-black">
+      <div className=" flex items-center justify-start">
         <Link to="" className="flex items-center text-white">
           <div>
             <img
@@ -22,34 +22,7 @@ function NavBar() {
             />
           </div>
         </Link>
-        {/* <div className="relative mx-4">
-          <input
-            type="text"
-            placeholder="Search..."
-            className="border border-gray-300 rounded-md py-2 px-4 w-full focus:outline-none focus:ring focus:border-blue-500"
-          />
-          <button
-            type="submit"
-            className="absolute -right-2 -top-2 mt-2 mr-2 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 h-full"
-          >
-            <svg
-              class=" w-16 h-16 text-white  dark:text-white"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="none"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-width="2"
-                d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
-              />
-            </svg>
-          </button>
-        </div> */}
+        
       </div>
 
       <div className="lg:hidden">

@@ -34,8 +34,8 @@ function HomeFunc() {
 
   return (
     <main className="">
-      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 ">
-        <div className="py-5 my-24 mx-8">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2">
+        <div className="py-5 my-24 mx-36 justify-center items-center">
           <h1 className="text-black font-bold text-3xl">FIND MOVIES</h1>
           <span className="bg-gradient-to-r from-blue-600 to-[#C40D60] inline-block text-transparent bg-clip-text font-bold text-5xl">
             TV SHOWS AND MORE
@@ -72,19 +72,19 @@ function HomeFunc() {
         </div>
       </div>
       {/* {This is line that containing more movies } */}
-      <span className="flex mx-5 ">
+      <span className="flex mx-5 py-5 justify-center ">
         <div className="">
           <img src={Mask} alt="Mask" className="w-full h-auto" />
         </div>
         <div className="">
           <p className="text-black">Trending</p>
         </div>
-        <div className="border-t border-gray-500 my-4 w-[65rem] mx-2"></div>
+        <div className="border-t border-gray-500 my-5 w-[96rem] mx-2"></div>
         <div className="">
           <p className="text-black">See More</p>
         </div>
       </span>
-      <section className="flex items-center justify-start my-5 mx-5">
+      <section className="flex items-center justify-center my-5 mx-5">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 py-24 px-8 space-x-1 space-y-2">
           {userdata.map((movie, index) => (
             <NavLink key={index} to={`/details/${movie.id}`}>
